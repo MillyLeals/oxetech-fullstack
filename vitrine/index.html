@@ -105,52 +105,40 @@
     </main>
 
     <section class="max-w-md mx-auto p-6">
-        <h2 class="text-2xl font-bold mb-6">Contato</h2>
+
+        <h2 class="text-2xl font-bold mb-6"> Contato </h2>
 
         <form id="formContato" class="flex flex-col gap-4">
 
-            <input type="text" id="nome" placeholder="Nome" class="border rounded p-2">
+            <input type="text" id="nome" placeholder="Nome" class="border rounded p-3">
+            <input type="email" id="email" placeholder="E-mail" class="border rounded p-3">
+            <textarea id="mensagem" placeholder="Mensagem" rows="4" class="border rounded p-3"></textarea>
 
-            <input type="email" id="email" placeholder="E-mail" class="border rounded p-2">
-
-            <textarea id="mensagem" placeholder="Mensagem" rows="4" class="border rounded p-2"></textarea>
-
-            <button type="submit" class="bg-blue-600 text-white py-2 rounded font-medium hover:bg-blue-700">
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
                 Enviar
             </button>
 
+            <button type="button" id="mostrarContatos"
+                class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+                Mostrar Contatos
+            </button>
+
+            <button type="button" id="limparHistorico"
+                class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700">
+                Limpar Histórico
+            </button>
+
         </form>
+        
+        <div id="listaContatos" class="mt-6 flex flex-col gap-4"></div>
+
     </section>
-
-    <script>
-
-        const form = document.getElementById("formContato");
-
-        form.addEventListener("submit", function (event) {
-
-            //impedindo seu carregamento
-            event.preventDefault();
-
-            const nome = document.getElementById("nome").value; //valores capturados (nome, email e mensagem)
-
-            const email = document.getElementById("email").value;
-
-            const mensagem = document.getElementById("mensagem").value;
-
-            if (nome === "" || email === "") {
-                alert("Preencha seu nome e email!");
-                return;
-            }
-            alert(`Obrigado por entrar em contato, ${nome}!`);
-
-            form.reset(); //limpando o formulário (nome, email e mensagem)   
-        });
-
-    </script>
 
     <footer class="bg-gray-700 text-white text-center p-4">
         &copy; 2024 Store - Todos os direitos reservados.
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
