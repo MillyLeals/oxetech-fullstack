@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de Produtos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <header class="flex justify-between items-center p-6 bg-white shadow-lg">
+        <h1 class="text-4xl font-bold">Store</h1>
+        <nav class="flex gap-6">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">Produtos</a>
+            <a href="#" class="hover:text-gray-300">Contato</a>
+        </nav>
+    </header>
+
+    <section class="bg-gray-100 text-center py-20">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Os melhores produtos estão aqui </h1>
+        <p class="text-lg text-gray-600 mb-8">Confira uma nova coleção com qualidade e preço justo</p>
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Comprar aqui</button>
+    </section>
+
+    <main class="max-w-6xl mx-auto p-6">
+        <!-- grid-cols 1 (1 coluna) celular && grid-cols-3 telas maiores (3 colunas)-->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <img src="../img/relogio.png" alt="Produto" class="w-full h-48 object-contain p-4 bg-white">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold">PulseBeat Watch</h3>
+                    <p class="text-gray-600 mb-4">R$ 259,90</p>
+                    <button
+                        class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition">Adicionar
+                        ao
+                        Carrinho</button>
+                </div>
+            </div>
+
+            <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <img src="../img/teclado.png" alt="Produto" class="w-full h-48 object-contain p-4 bg-white">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold">RGB Storm Keyboard</h3>
+                    <p class="text-gray-600 mb-4">R$ 149,90</p>
+                    <button
+                        class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition">Adicionar
+                        ao
+                        Carrinho</button>
+                </div>
+            </div>
+
+            <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <img src="../img/fone.png" alt="Produto" class="w-full h-48 object-contain p-4 bg-white">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold">AirSound Pro</h3>
+                    <p class="text-gray-600 mb-4">R$ 199,90</p>
+                    <button
+                        class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition">Adicionar
+                        ao
+                        Carrinho</button>
+                </div>
+            </div>
+
+            <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <img src="../img/fone.png" alt="Produto" class="w-full h-48 object-contain p-4 bg-white">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold">Produto</h3>
+                    <p class="text-gray-600 mb-4">R$ 199,90</p>
+                    <button
+                        class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition">Adicionar
+                        ao
+                        Carrinho</button>
+                </div>
+            </div>
+
+            <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <img src="../img/fone.png" alt="Produto" class="w-full h-48 object-contain p-4 bg-white">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold">Produto</h3>
+                    <p class="text-gray-600 mb-4">R$ 199,90</p>
+                    <button
+                        class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition">Adicionar
+                        ao
+                        Carrinho</button>
+                </div>
+            </div>
+
+            <div class="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <img src="../img/fone.png" alt="Produto" class="w-full h-48 object-contain p-4 bg-white">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold">Produto</h3>
+                    <p class="text-gray-600 mb-4">R$ 199,90</p>
+                    <button
+                        class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 transition">Adicionar
+                        ao
+                        Carrinho</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="max-w-md mx-auto p-6">
+
+        <h2 class="text-2xl font-bold mb-6"> Contato </h2>
+
+        <form id="formContato" class="flex flex-col gap-4">
+
+            <input type="text" id="nome" placeholder="Nome" class="border rounded p-3">
+            <input type="email" id="email" placeholder="E-mail" class="border rounded p-3">
+            <textarea id="mensagem" placeholder="Mensagem" rows="4" class="border rounded p-3"></textarea>
+
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                Enviar
+            </button>
+
+            <button type="button" id="mostrarContatos"
+                class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+                Mostrar Contatos
+            </button>
+
+            <button type="button" id="limparHistorico"
+                class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700">
+                Limpar Histórico
+            </button>
+
+        </form>
+        
+        <div id="listaContatos" class="mt-6 flex flex-col gap-4"></div>
+
+    </section>
+
+    <footer class="bg-gray-700 text-white text-center p-4">
+        &copy; 2024 Store - Todos os direitos reservados.
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
