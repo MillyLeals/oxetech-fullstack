@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreador de Entregas</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#121212] min-h-screen p-8 font-sans flex flex-col items-center pt-10">
+
+    <header class="text-center mb-8 w-full max-w-md">
+        <h1 class="text-3xl font-bold text-[#BDBDBD] mb-6">Rastreador de Entregas</h1>
+        <p class="text-sm text-[#757575]">Digite o CEP para visualizar seu destino: </p>
+    </header>
+
+    <div class="flex gap-2">
+        <input type="text" id="cep" placeholder="Ex: 01001000..." maxlength="8"
+            class="border bg-[#1a1a1a] text-white border border-[#333333] p-2 rounded">
+
+        <button id="buscar"
+            class="px-6 py-3 bg-[#333333] text-white font-bold rounded-lg hover:bg-[#BDBDBD] hover:text-black transition-colors duration-200">
+            Buscar
+        </button>
+    </div>
+
+    <div id="resultado" class="mt-8 w-full max-w-md"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
